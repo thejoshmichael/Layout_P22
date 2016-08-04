@@ -1,0 +1,84 @@
+::-webkit-scrollbar {
+  width: 0; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: white;
+  padding: 0;
+  margin: 0; }
+  body .wrapper {
+    background: red;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    body .wrapper .about {
+      width: 45%;
+      background: white; }
+    body .wrapper .work {
+      background: #8C8C8C; }
+    body .wrapper .contact {
+      background: #CFCFCF; }
+    body .wrapper .work, body .wrapper .contact {
+      width: 27.5%;
+      -webkit-transition: width 300ms ease-in-out;
+      transition: width 300ms ease-in-out;
+      position: relative; }
+      body .wrapper .work:hover, body .wrapper .contact:hover {
+        width: 50%; }
+      body .wrapper .work .trigger, body .wrapper .contact .trigger {
+        width: 65%;
+        max-width: 500px;
+        height: 55%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        body .wrapper .work .trigger:after, body .wrapper .contact .trigger:after {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          content: "";
+          opacity: 0;
+          -webkit-transition: opacity 500ms ease-in-out;
+          transition: opacity 500ms ease-in-out;
+          background-size: cover;
+          background-position: center center; }
+    body .wrapper .work .trigger:after {
+      background-image: url("../images/work.jpg"); }
+    body .wrapper .contact .trigger:after {
+      background-image: url("../images/contact.jpg"); }
+    body .wrapper .work:hover > .trigger:after {
+      opacity: 1; }
+    body .wrapper .contact:hover > .trigger:after {
+      opacity: 1; }
+    body .wrapper h3 {
+      color: white;
+      border: 1px solid white;
+      padding: 10px 30px;
+      z-index: 2; }
