@@ -1,14 +1,29 @@
 ::-webkit-scrollbar {
   width: 0; }
 
+::-moz-selection {
+  background: #FF0000;
+  color: white; }
+
+::selection {
+  background: #FF0000;
+  color: white; }
+
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none; }
 
 body {
   background: white;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "p22-underground", sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 3px; }
   body .wrapper {
     background: red;
     position: absolute;
@@ -21,16 +36,87 @@ body {
     display: -ms-flexbox;
     display: flex; }
     body .wrapper .about {
-      width: 45%;
-      background: white; }
+      width: 640px;
+      background: white;
+      position: relative; }
+      body .wrapper .about .title {
+        font-size: 100px;
+        font-family: Helvetic, sans-serif;
+        letter-spacing: -5px;
+        display: block;
+        position: absolute;
+        color: #FF0000;
+        line-height: 0.8;
+        top: -10px;
+        white-space: none; }
+      body .wrapper .about .about-container {
+        width: 100%;
+        padding: 2em;
+        color: black; }
+        body .wrapper .about .about-container img {
+          margin-bottom: 20px;
+          width: 100%;
+          max-width: 100%; }
+        body .wrapper .about .about-container h1 {
+          font-size: 1.3em;
+          font-weight: 400;
+          line-height: 1;
+          text-transform: uppercase; }
+        body .wrapper .about .about-container p {
+          font-size: 10px;
+          line-height: 1.8;
+          margin: 10px 0;
+          font-weight: 300;
+          text-transform: uppercase; }
+        body .wrapper .about .about-container .read-more {
+          background: black;
+          color: white;
+          padding: 10px 20px;
+          font-size: 10px;
+          margin-top: 10px;
+          display: inline-block;
+          text-transform: uppercase;
+          -webkit-transition: all 0.15s ease-out 0s;
+          transition: all 0.15s ease-out 0s; }
+      body .wrapper .about .about-footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 0 2em; }
+        body .wrapper .about .about-footer p {
+          font-size: 10px;
+          font-weight: 300;
+          color: rgba(0, 0, 0, 0.3);
+          text-transform: uppercase; }
+        body .wrapper .about .about-footer ul li {
+          display: inline-block; }
+          body .wrapper .about .about-footer ul li a {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 18px;
+            -webkit-transition: all 0.15s ease-out 0s;
+            transition: all 0.15s ease-out 0s; }
+            body .wrapper .about .about-footer ul li a:hover {
+              color: black; }
     body .wrapper .work {
       background: #8C8C8C; }
     body .wrapper .contact {
       background: #CFCFCF; }
     body .wrapper .work, body .wrapper .contact {
-      width: 27.5%;
-      -webkit-transition: width 300ms ease-in-out;
-      transition: width 300ms ease-in-out;
+      width: 25%;
+      -webkit-transition: width 350ms ease-in-out;
+      transition: width 350ms ease-in-out;
       position: relative; }
       body .wrapper .work:hover, body .wrapper .contact:hover {
         width: 50%; }
@@ -69,6 +155,18 @@ body {
           transition: opacity 500ms ease-in-out;
           background-size: cover;
           background-position: center center; }
+        body .wrapper .work .trigger .trigger-btn, body .wrapper .contact .trigger .trigger-btn {
+          color: white;
+          border: 1px solid white;
+          padding: 10px 30px;
+          z-index: 2;
+          font-size: 12px;
+          text-transform: uppercase;
+          -webkit-transition: all 0.15s ease-out 0s;
+          transition: all 0.15s ease-out 0s; }
+          body .wrapper .work .trigger .trigger-btn:hover, body .wrapper .contact .trigger .trigger-btn:hover {
+            border: 1px solid #FF0000;
+            color: #FF0000; }
     body .wrapper .work .trigger:after {
       background-image: url("../images/work.jpg"); }
     body .wrapper .contact .trigger:after {
@@ -77,9 +175,3 @@ body {
       opacity: 1; }
     body .wrapper .contact:hover > .trigger:after {
       opacity: 1; }
-    body .wrapper h3 {
-      color: white;
-      border: 1px solid white;
-      padding: 10px 30px;
-      z-index: 2;
-      font-family: "p22-underground", sans-serif; }
